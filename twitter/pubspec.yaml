@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  provider: ^6.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -55,6 +56,11 @@ flutter:
     - family: Raleway
       fonts:
         - asset: fonts/Raleway-ExtraBold.ttf
+        - asset: fonts/Raleway-SemiBold.ttf
+        - asset: fonts/Raleway-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Light.ttf
+
   uses-material-design: true
-  assets:
-    - assets/

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:twitter/screens/home_screen.dart';
 import 'package:twitter/screens/signin_screen.dart';
-import 'package:twitter/widgets/entry_field.dart';
-import 'package:twitter/widgets/flat_button.dart';
+import 'package:twitter/providers/share_state.dart';
+import 'package:provider/provider.dart';
 
-import 'package:flutter/material.dart';
-import 'package:twitter/screens/signin_screen.dart';
-
-void main() {
-  runApp(const MyApp());
+void main() async {
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider<SharedState>(create: (_) => SharedState()),
+      ],
+    child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +22,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SignIn(),
+      
     );
   }
 }
