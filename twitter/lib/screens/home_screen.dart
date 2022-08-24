@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter/widgets/side_bar_menu.dart';
-import 'package:twitter/assets/postList.dart';
+import 'package:twitter/widgets/bar_menu.dart';
 import 'package:twitter/widgets/post_widget.dart';
+import '../assets/postList.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,8 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      drawer: 
-        const SideBarMenu(), 
+      drawer: const SideBarMenu(),
       body: SafeArea(child: ListView.builder(
         itemCount: postList.length,
         itemBuilder: (context, index) {
@@ -37,7 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
             isVerified: postList[index]['isVerified'],
           );
         },
-      )),
+      ),
+      ),
     );
   }
 }
